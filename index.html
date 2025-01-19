@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Hello World🌎!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+        color: #fff;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+      }
+
+      .text {
+        font-size: 4rem;
+        font-weight: bold;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+
+      .text::before {
+        content: "Hello World 🌎";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        color: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      .text span {
+        display: inline-block;
+        transform: rotateX(30deg) rotateY(30deg);
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text">
+      <span>Hello World 🌎</span>
+    </div>
+  </body>
 </html>
